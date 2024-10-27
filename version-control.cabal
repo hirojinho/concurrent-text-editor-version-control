@@ -26,6 +26,7 @@ source-repository head
 library
   exposed-modules:
       Lib
+      Main
   other-modules:
       Paths_version_control
   autogen-modules:
@@ -34,7 +35,14 @@ library
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , containers
+    , http-types
+    , scotty
+    , stm
+    , text
+    , time
   default-language: Haskell2010
 
 executable version-control-exe
@@ -47,7 +55,14 @@ executable version-control-exe
       app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , containers
+    , http-types
+    , scotty
+    , stm
+    , text
+    , time
     , version-control
   default-language: Haskell2010
 
@@ -62,6 +77,13 @@ test-suite version-control-test
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
+    , containers
+    , http-types
+    , scotty
+    , stm
+    , text
+    , time
     , version-control
   default-language: Haskell2010
