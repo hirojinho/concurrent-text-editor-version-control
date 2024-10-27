@@ -26,6 +26,8 @@ dependencies:
 - aeson # JSON handling
 - stm # software transactional memory (to handle version control)
 - containers # for storing version of documents (maps, sets)
+- time # for timestamp
+- http-types # for HTTP status codes
 
 ghc-options:
 - -Wall
