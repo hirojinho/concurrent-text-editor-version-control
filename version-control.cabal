@@ -25,8 +25,12 @@ source-repository head
 
 library
   exposed-modules:
+      API
+      App
       Lib
       Main
+      Repository
+      Types
   other-modules:
       Paths_version_control
   autogen-modules:
